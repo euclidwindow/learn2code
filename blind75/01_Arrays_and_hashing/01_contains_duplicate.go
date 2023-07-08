@@ -1,8 +1,8 @@
-# check if there any duplicates in a given int array
+// check if there any duplicates in a given int array
 
-####################################################################
-# GO
-# Solution 1 = SORTING ; TC: O(n log n), SC: O(1)
+// ####################################################################
+// GO
+// Solution 1 = SORTING ; TC: O(n log n), SC: O(1)
 
 func containsDuplicate(nums []int) bool {
     sort.Ints(nums)
@@ -14,7 +14,7 @@ func containsDuplicate(nums []int) bool {
     return false
 }
 
-# Solution 2 = USE SETS ; TC: O(n), SC : O(n)
+// Solution 2 = USE SETS ; TC: O(n), SC : O(n)
 
 func containsDuplicate(nums []int) bool {
     set := make(map[int]struct{})
