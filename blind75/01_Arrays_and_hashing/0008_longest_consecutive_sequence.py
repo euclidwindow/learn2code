@@ -34,3 +34,25 @@ class Solution:
             if curr_max_len > max_len:
                 max_len = curr_max_len
         return max_len
+
+# SOLUTION 2 : SET
+# TC: O(n), SC: O(n)
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        max_len = 0
+        numset = set(nums)
+        
+        for n in nums:
+            if n-1 not in numset:
+                curr_max_len = 1
+                curr_num = n
+                
+                while curr_num + 1 in numset:
+                    curr_num += 1
+                    curr_max_len += 1
+                
+                if curr_max_len > max_len:
+                    max_len = curr_max_len
+                
+        return max_len
