@@ -80,7 +80,7 @@ class Solution:
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        output = set()
+        output = []
         dups = set()
         seen = {}
         
@@ -90,8 +90,10 @@ class Solution:
                 for j, n2 in enumerate(nums[i+1:]):
                     complement = -n1 - n2
                     if complement in seen and seen[complement] == i:
-                        curr = tuple(sorted([n1, n2, complement]))
-                        output.add(curr)
+                        triplet = sorted([n1, n2, complement])
+                        if triplet not in output:
+                            output.append(triplet)
                     seen[n2] = i
         return output
+                
                 
