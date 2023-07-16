@@ -38,14 +38,14 @@ nums is sorted and rotated between 1 and n times.
 """
 
 
-#### BRUTE FORCE
+#### BRUTE FORCE USING SORT, TC: O(n log n), SC: O(1)
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         nums.sort()
         return nums[0]
 
-#### BINARY SEARCH
+#### BINARY SEARCH: TC: O(log n), SC: O(1)
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
